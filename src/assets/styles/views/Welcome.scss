@@ -1,0 +1,58 @@
+body {
+  background: url('https://github.com/Sergearts/ikiringo/blob/gh-pages/img/3.jpg?raw=true');
+  background-size: cover;
+}
+
+.home-jumbotron {
+  text-align: center;
+}
+
+a {
+  color: #42b983;
+  &:hover {
+    text-decoration: none;
+    color: #36996c;
+  }
+}
+
+.login-button {
+  margin-top: 20px;
+  border-color: #42b983;
+  width: 200px;
+  font-size: larger;
+  &:hover {
+    border-color: #36996c;
+    color: #42b983;
+    background-color: transparent;
+  }
+}
+
+@media only screen and (min-width: 560px) {
+  .jumbotron-container {
+    height: 100vh;
+    position: relative;
+  }
+
+  .home-jumbotron {
+    width: 50%;
+    height: 50%;
+    margin: 0;
+    position: absolute;
+    top: 15%;
+    left: 25%;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .jumbotron-container {
+    padding: 20px;
+  }
+
+  .home-jumbotron {
+    margin-top: 35%;
+  }
+
+  .display-3 {
+    font-size: 50px;
+  }
+}
