@@ -8,6 +8,7 @@ body {
 
 .home-jumbotron {
   text-align: center;
+  background-color: white;
 }
 
 a {
@@ -32,12 +33,16 @@ a {
   }
 }
 
+.welcome-input {
+  margin-top: 20px;
+}
+
 @media only screen and (min-width: 560px) {
   .jumbotron-container {
     height: 100vh;
     position: relative;
   }
-
+  
   .home-jumbotron {
     width: 50%;
     height: 50%;
@@ -45,6 +50,12 @@ a {
     position: absolute;
     top: 15%;
     left: 25%;
+  }
+
+  .welcome-input {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10px;
   }
 }
 
@@ -54,10 +65,14 @@ a {
   }
 
   .home-jumbotron {
-    margin-top: 35%;
+    margin-top: 25%;
   }
 
   .display-3 {
     font-size: 50px;
+  }
+
+  .lead {
+    margin-bottom: 40px;
   }
 }
