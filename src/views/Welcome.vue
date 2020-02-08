@@ -5,9 +5,11 @@
       header="Welcome to Ikiringo"
       lead="Log in to continue"
     >
+    <router-link to='/login'>
       <b-button class="login-button" variant="outline-primary">
-        <router-link to='/login'>Log In</router-link>
+        Log In
       </b-button>
+      </router-link>
     </b-jumbotron>
   </div>
 </template>
