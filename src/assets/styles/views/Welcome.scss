@@ -27,9 +27,9 @@ a {
   width: 200px;
   font-size: larger;
   &:hover {
-    border-color: $primaryhovered;
-    color: $primaryhovered !important;
-    background-color: transparent;
+    border-color: $primary;
+    background-color: $primary;
+    color: white !important;
   }
 }
 
@@ -50,6 +50,7 @@ a {
     position: absolute;
     top: 15%;
     left: 25%;
+    padding: 32px;
   }
 
   .welcome-input {
