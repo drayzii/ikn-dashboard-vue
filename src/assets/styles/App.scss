@@ -4,8 +4,17 @@
   height: 35px;
 }
 
+body {
+  background-color: rgb(236, 236, 236);
+}
+
 .menu-item {
   font-size: 17px;
+}
+
+@function get-vh($target) {
+  $vh-context: (1000*.01) * 1px;
+  @return ($target/$vh-context) * 1vh;
 }
 
 @media only screen and (min-width: 560px) {

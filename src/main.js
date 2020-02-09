@@ -6,6 +6,7 @@ import router from './router';
 import store from './store';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
+import 'vue-sidebar-menu/dist/vue-sidebar-menu.css';
 import './assets/styles/index.scss';
 
 Vue.use(BootstrapVue);

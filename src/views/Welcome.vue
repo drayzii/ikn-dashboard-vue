@@ -1,5 +1,5 @@
 <template>
-  <div class="jumbotron-container">
+  <div class="jumbotron-container welcome-page">
     <b-jumbotron
       class="home-jumbotron"
       header="Welcome to Ikiringo"
@@ -37,7 +37,7 @@ export default {
         this.$bvToast.toast(error, {
           title: 'Login Error',
           variant: 'danger',
-          toaster: 'b-toaster-bottom-right',
+          toaster: 'b-toaster-top-right',
           autoHideDelay: 3000,
           appendToast: false,
         });
