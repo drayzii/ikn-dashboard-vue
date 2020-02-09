@@ -1,13 +1,25 @@
 import axios from '@/config/axios';
 
 export default {
-  login: async ({ commit }, payload) => {
-    try {
-      const { data } = await axios.post('/auth/login', payload);
-      commit('login', data.data);
-    } catch (error) {
-      const err = error.response ? error.response.data.message : error.message;
-      console.log('error', err);
-    }
-  },
+  login: async ({ commit }, payload) => new Promise((resolve, reject) => {
+    commit('auth_request');
+    axios.post('/auth/login', payload)
+      .then((resp) => {
+        const {
+          data: {
+            data: {
+              token, firstName, lastName, type,
+            },
+          },
+        } = resp;
+        localStorage.setItem('token', token);
+        commit('login_success', token, { firstName, lastName, type });
+        resolve(resp);
+      })
+      .catch((err) => {
+        commit('login_error');
+        const error = err.response ? err.response.data.message : err.message;
+        reject(error);
+      });
+  }),
 };

@@ -31,6 +31,17 @@ export default {
       this.login({
         email: this.email,
         password: this.password,
+      }).then(() => {
+        this.$router.push('/dashboard');
+      }).catch((error) => {
+        this.$bvToast.toast(error, {
+          title: 'Login Error',
+          variant: 'danger',
+          toaster: 'b-toaster-bottom-right',
+          autoHideDelay: 3000,
+          appendToast: false,
+        });
+        this.password = '';
       });
     },
   },

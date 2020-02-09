@@ -1,8 +1,10 @@
 export default {
-  login: (state, {
-    token, firstName, lastName, type,
-  }) => {
+  login_success: (state, token, user) => {
     localStorage.setItem('IKIRINGO_TOKEN', token);
-    state.user = { firstName, lastName, type };
+    state.authStatus = 'success';
+    state.user = user;
+  },
+  login_error: (state) => {
+    state.authStatus = 'error';
   },
 };
