@@ -11,3 +11,11 @@
 .vsm--link_active {
   box-shadow: 3px 0px 0px 0px $primary inset !important;
 }
+
+@media only screen and (min-width: 560px) {}
+
+@media only screen and (max-width: 560px) {
+  .v-sidebar-menu {
+    z-index: 1;
+  }
+}
