@@ -11,8 +11,8 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
-          <b-nav-item class="menu-item" v-if="isLoggedIn">
-            <router-link to='#'>Log out</router-link>
+          <b-nav-item class="menu-item" v-if="isLoggedIn"  @click="logout">
+            Log out
           </b-nav-item>
           <b-nav-item class="menu-item">
             <router-link to='#'>Go to ikiringo.rw</router-link>
@@ -31,6 +31,12 @@ export default {
   name: 'App',
   computed: {
     ...mapGetters(['isLoggedIn']),
+  },
+  methods: {
+    logout() {
+      localStorage.removeItem('IKIRINGO_TOKEN');
+      this.$router.go({ path: '/login' });
+    },
   },
 };
 </script>

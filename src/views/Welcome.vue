@@ -32,7 +32,7 @@ export default {
         email: this.email,
         password: this.password,
       }).then(() => {
-        this.$router.push({ path: '/' });
+        this.$router.go({ path: '/' });
       }).catch((error) => {
         this.$bvToast.toast(error, {
           title: 'Login Error',

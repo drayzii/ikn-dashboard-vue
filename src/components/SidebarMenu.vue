@@ -18,16 +18,16 @@ export default {
         },
         {
           href: '/',
-          title: 'Statistics',
+          title: 'Dashboard',
           icon: 'fas fa-chart-pie',
         },
         {
-          href: '/',
+          href: '/add-artist',
           title: 'Add an artist',
           icon: 'fas fa-user-plus',
         },
         {
-          href: '/',
+          href: '/artists',
           title: 'Manage Artists',
           icon: 'fas fa-user-edit',
         },
@@ -37,7 +37,7 @@ export default {
           hiddenOnCollapse: true,
         },
         {
-          href: '/',
+          href: '/bookings',
           title: 'View All Bookings',
           icon: 'far fa-calendar-alt',
         },
@@ -47,12 +47,12 @@ export default {
           hiddenOnCollapse: true,
         },
         {
-          href: '/',
+          href: '/add-post',
           title: 'Add New Post',
           icon: 'fas fa-plus',
         },
         {
-          href: '/',
+          href: '/posts',
           title: 'Manage Posts',
           icon: 'fas fa-drum',
         },
@@ -62,7 +62,7 @@ export default {
           hiddenOnCollapse: true,
         },
         {
-          href: '/',
+          href: '/settings',
           title: 'Settings',
           icon: 'fas fa-user-cog',
         },
