@@ -24,7 +24,7 @@ body {
   @return ($target/$vh-context) * 1vh;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 991px) {
   .logo-container {
     margin-left: 30px;
   }
@@ -33,7 +33,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 991px) {
   .navbar {
     padding: 0;
     z-index: 20;
