@@ -19,6 +19,13 @@ body {
   }
 }
 
+.paper {
+  min-height: 100%;
+  border-radius: 0;
+  background-color: rgb(240, 240, 240);
+  margin: -20px -10px !important;
+}
+
 @function get-vh($target) {
   $vh-context: (1000*.01) * 1px;
   @return ($target/$vh-context) * 1vh;

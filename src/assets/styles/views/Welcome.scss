@@ -22,6 +22,7 @@ a {
 .login-button {
   margin-top: 20px;
   border-color: $primary;
+  background-color: transparent;
   color: $primary;
   border-width: 1.5px;
   width: 200px;
@@ -30,6 +31,11 @@ a {
     border-color: $primary;
     background-color: $primary;
     color: white !important;
+  }
+  &:focus,
+  &.focus {
+    outline: 0;
+    background-color: $primary !important;
   }
 }
 

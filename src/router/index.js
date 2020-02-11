@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import store from '../store';
 import Welcome from '../views/Welcome.vue';
 import Dashboard from '../views/Dashboard.vue';
+import NewArtist from '../views/NewArtist.vue';
 
 Vue.use(VueRouter);
 
@@ -19,6 +20,14 @@ const routes = [
     path: '/',
     name: 'dashboard',
     component: Dashboard,
+    meta: {
+      requiresAuth: true,
+    },
+  },
+  {
+    path: '/new-artist',
+    name: 'new-artist',
+    component: NewArtist,
     meta: {
       requiresAuth: true,
     },

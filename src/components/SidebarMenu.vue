@@ -1,6 +1,11 @@
 <template>
   <div>
-    <sidebar-menu :menu="menu" disableHover />
+    <sidebar-menu
+      :menu="menu"
+      @toggle-collapse="onToggleCollapse"
+      disableHover
+      collapsed
+    />
   </div>
 </template>
 
@@ -22,7 +27,7 @@ export default {
           icon: 'fas fa-chart-pie',
         },
         {
-          href: '/add-artist',
+          href: '/new-artist',
           title: 'Add an artist',
           icon: 'fas fa-user-plus',
         },
@@ -71,6 +76,14 @@ export default {
   },
   components: {
     SidebarMenu,
+  },
+  methods: {
+    onToggleCollapse(collapsed) {
+      this.onToggle(collapsed);
+    },
+  },
+  props: {
+    onToggle: Function,
   },
 };
 </script>
