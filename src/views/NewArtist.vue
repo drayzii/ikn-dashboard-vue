@@ -80,7 +80,7 @@ export default {
       this.classes = collapsed ? 'collapsed' : 'expanded';
     },
     onSubmit() {
-      console.log(this.form);
+      // console.log(this.form);
     },
   },
 };

@@ -15,7 +15,7 @@
             Log out
           </b-nav-item>
           <b-nav-item class="menu-item">
-            <router-link to='#'>Go to ikiringo.rw</router-link>
+            <a @click="goToOfficialWeb">Go to ikiringo.rw</a>
           </b-nav-item>
         </b-navbar-nav>
       </b-collapse>
@@ -36,6 +36,9 @@ export default {
     logout() {
       localStorage.removeItem('IKIRINGO_TOKEN');
       this.$router.go({ path: '/login' });
+    },
+    goToOfficialWeb() {
+      window.open('https://ikiringo.rw', '_blank');
     },
   },
 };
