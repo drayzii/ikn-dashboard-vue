@@ -21,7 +21,7 @@ export default {
   },
   async getImages({ commit, dispatch }) {
     try {
-      const result = await axios.get('/images', config);
+      const result = await axios.get('/images?page=0&pageSize=20');
       commit('addImagesToState', result.data);
     } catch (err) {
       const error = err.response ? err.response.data.message : err.message;
