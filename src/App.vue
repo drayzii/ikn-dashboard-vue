@@ -20,15 +20,20 @@
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
+    <ErrorMessage />
     <router-view/>
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
+import ErrorMessage from './components/ErrorMessage.vue';
 
 export default {
   name: 'App',
+  components: {
+    ErrorMessage,
+  },
   computed: {
     ...mapGetters(['isLoggedIn']),
   },

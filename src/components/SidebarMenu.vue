@@ -32,6 +32,11 @@ export default {
           icon: 'fas fa-user-plus',
         },
         {
+          href: '/gallery',
+          title: 'Gallery',
+          icon: 'fas fa-images',
+        },
+        {
           href: '/artists',
           title: 'Manage Artists',
           icon: 'fas fa-user-edit',

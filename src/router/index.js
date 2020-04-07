@@ -4,6 +4,7 @@ import store from '../store';
 import Welcome from '../views/Welcome.vue';
 import Dashboard from '../views/Dashboard.vue';
 import NewArtist from '../views/NewArtist.vue';
+import GalleryPage from '../views/GalleryPage.vue';
 
 Vue.use(VueRouter);
 
@@ -28,6 +29,14 @@ const routes = [
     path: '/new-artist',
     name: 'new-artist',
     component: NewArtist,
+    meta: {
+      requiresAuth: true,
+    },
+  },
+  {
+    path: '/gallery',
+    name: 'Gallery',
+    component: GalleryPage,
     meta: {
       requiresAuth: true,
     },
