@@ -27,6 +27,7 @@ a {
   border-width: 1.5px;
   width: 200px;
   font-size: larger;
+  // padding: 1px;
   &:hover {
     border-color: $primary;
     background-color: $primary;
@@ -56,7 +57,7 @@ a {
     position: absolute;
     top: 15%;
     left: 25%;
-    padding: 32px;
+    padding: 10px;
   }
 
   .welcome-input {

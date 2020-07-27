@@ -16,7 +16,6 @@
               <div class="spinner-border text-primary" role="status">
                 <span class="sr-only"></span>
               </div>
-              <div></div>
               <div class="px-2">Uploading files...</div>
             </div>
         </div>
