@@ -2,13 +2,21 @@
   <div class="jumbotron-container welcome-page">
     <b-jumbotron
       class="home-jumbotron"
-      header="Welcome to Ikiringo"
+      header="Ikiringo Dashboard"
+      header-level="4"
       lead="Log in to continue"
     >
     <b-form-input v-model="email" class="welcome-input" type="email" placeholder="Email"/>
     <b-form-input v-model="password" type="password" class="welcome-input" placeholder="Password"/>
-    <b-button class="login-button" variant="outline-primary" @click="handleSubmit">
-      Log In
+    <b-button class="login-button" v-if="!isLogin" variant="outline-primary" @click="handleSubmit">
+      LOGIN
+    </b-button>
+    <b-button class="login-button" v-else variant="outline-primary">
+      <div class="d-flex justify-content-center p-0">
+        <div class="spinner-border text-primary" role="status">
+          <span class="sr-only"></span>
+        </div>
+      </div>
     </b-button>
     </b-jumbotron>
   </div>
@@ -23,11 +31,13 @@ export default {
     return {
       email: '',
       password: '',
+      isLogin: false,
     };
   },
   methods: {
     ...mapActions(['login']),
     handleSubmit() {
+      this.isLogin = true;
       this.login({
         email: this.email,
         password: this.password,
@@ -42,6 +52,7 @@ export default {
           appendToast: false,
         });
         this.password = '';
+        this.isLogin = false;
       });
     },
   },
